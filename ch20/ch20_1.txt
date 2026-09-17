@@ -1,0 +1,10 @@
+ollama pull nomic-embed-text
+ollama pull llama3.2
+
+
+from langchain_ollama import OllamaEmbeddings
+model=OllamaEmbeddings(model="nomic-embed-text") # 建立模型物件
+txt = "我很快樂"  # 要轉換成詞嵌入向量的文字
+embed_txt = model.embed_query(txt)
+print(f"「{txt}」的詞嵌入向量：{embed_txt}")
+

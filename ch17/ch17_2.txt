@@ -1,0 +1,1 @@
+pip install paddlepaddle paddleocr  # 在虛擬環境安裝兩個套件

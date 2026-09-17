@@ -1,0 +1,20 @@
+pip install ollama
+
+
+import ollama
+res = ollama.generate(
+    model="gemma3:1b",
+    prompt="小王子故事裡的狐狸象徵什麼？",
+)
+print (res.response)  # 取得模型的回應訊息
+
+
+
+pip install langchain-core langchain-ollama
+
+
+from langchain_ollama import ChatOllama
+lm = ChatOllama( model="gemma3:1b" )
+resp = llm.invoke("請翻譯成繁體中文：Today is a good day to try.")
+print(res.content)
+type(resp)
