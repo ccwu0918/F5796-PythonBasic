@@ -1,0 +1,9 @@
+pip install ultralytics
+pip install dill
+
+import ultralytics
+print(ultralytics.__version__)
+
+
+yolo predict model=yolo12n.pt source='https://swf.com.tw/images/train.jpg'
+
