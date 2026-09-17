@@ -1,0 +1,1 @@
+0 6,18 * * * ~/crawler/env/bin/python ~/crawler/src/shopping.py

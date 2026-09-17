@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<base href="/static/">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="css/main.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible : true, active : 'none'
+    });
+
+    $('.iconChooser').on('click', function() {
+      iconPath = $(this).attr('src');
+      $('#myIcon').attr('src', iconPath);
+      $('#icon').val(iconPath.split('/')[1]);
+    });
+  } );
+  </script>
+  <title>編輯留言版內容</title>
+</head>
+
+<body>
+<div id="main"> 
+  <form method="POST" action="/update_msg" name="questForm" id="questForm">
+    <h1><img src="images/title.png" alt="電玩快打留言板" width="225" height="19"></h1>
+    <p>
+      <label for="guestName">姓名</label>
+      <input name="guestname" class="fieldWidth" id="guestName" required="required" value="{{book.guestname}}">
+      <br/>
+      <label for="email">電子郵件</label>
+          <input type="email" placeholder="請輸入e-mail" class="fieldWidth" name="email" id="email" value="{{book.email}}">
+      <br/>
+      <label>留言</label>
+      <textarea name="message" rows=7 class="fieldWidth" id="message" required="required">{{book.message}}</textarea>
+      <br />
+      <label>圖像</label>
+      <img src="icons/{{book.icon}}" name="myIcon" width="72" height="75" id="myIcon">
+      <input name="icon" type="hidden" id="icon" value="{{book.icon}}" />
+      <input name="id" type="hidden" value="{{book.id}}" />
+
+    <div id="accordion">
+      <h3>選擇圖像</h3>
+        <div id="icons">
+          <div class="row">
+            <div class="column">
+              <img src="icons/ico1.png" width="75" height="75" class="iconChooser">
+              <img src="icons/ico2.png" width="75" height="75" class="iconChooser">
+              <img src="icons/ico3.png" width="75" height="75" class="iconChooser">
+              <img src="icons/ico4.png" width="75" height="75" class="iconChooser">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="icons/ico5.png" width="75" height="75" class="iconChooser">
+              <img src="icons/ico6.png" width="75" height="75" class="iconChooser">
+              <img src="icons/ico7.png" width="75" height="75" class="iconChooser">
+              <img src="icons/ico8.png" width="75" height="75" class="iconChooser">
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div id="btnArea">
+      <input type="submit" name="submit" id="submit" value="儲存"/>
+      <input type="reset" name="cancel" id="cancel" value="重填">
+      </div>
+    </p>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+from guestbook import db
+db.create_all()
+
+
+from guestbook import Guestbook
+gb = Guestbook(guestname='小趙', email='jeff@example.com', message='沒事路過～')
+db.session.add(gb)
+db.session.commit()
+from guestbook import User
+usr1 = User(name='cubie', email='cubie@examle.com', password='123456', is_admin=True)
+usr2 = User(name='路人甲', email='xyz@example.com', password='abcdefg')
+db.session.add(usr1)
+db.session.add(usr2)
+db.session.commit()
+
+
+User.query.all()
+User.query.filter_by(name='cubie').first()
+
+
+usr = User.query.all()
+len(usr)
+usr[0].is_admin

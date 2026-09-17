@@ -1,0 +1,119 @@
+body {
+  font-family: '微軟正黑體', '黑體-繁', sans-serif;
+  background-attachment: fixed;
+  background-color: #c98d69;
+  background-image: url(../images/invader_a.gif);
+  background-repeat: no-repeat;
+  background-position: 20px 50px;
+}
+
+.msgBox {
+  color:black;
+  border: thin dotted #FFFFFF;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.formBkgnd {
+  color: #FFFFFF;
+  background-color: #666666;
+}
+
+label {
+  float: left;
+  width: 5em;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  text-align: right;
+}
+
+br {
+  clear: both;
+}
+
+.fieldWidth {
+  font-size: 14px;
+  width: 250px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding:5px;
+  background: #f0eacf;
+}
+
+/* 主要內容的區塊 */
+#main {
+  position: absolute;
+  left: 275px;
+  top: 5px;
+  width: 450px;
+  height: 306px;
+  z-index: 2;
+  font-size: 0.9em;
+  color: #FFFFFF;
+}
+
+/* 設定傳送鈕的樣式 */
+
+#submit {
+  background-color:#2F8A8A;
+  background-image: linear-gradient(to bottom, #2F8A8A, #246B6B);
+  border-radius: 15px;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  margin-right: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 1px 0px #000000;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#submit:hover {
+  background-image: linear-gradient(to bottom, #246B6B, #2F8A8A);
+}
+
+/* 設定取消鈕的樣式 */
+#cancel_btn {
+  background-color:#9BA17E;
+  background-image: linear-gradient(to bottom, #B6BD94, #677057);
+  border-radius: 15px;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  box-shadow: 1px 1px 1px 0px #000000;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#cancel_btn:hover {
+  background-image: linear-gradient(to bottom, #677057 #B6BD94);
+}
+
+.iconChooser {
+  float: left;
+  padding-right: 20px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin-bottom: 10px;
+}
+
+.ui-accordion .ui-accordion-content {
+  overflow: hidden !important;
+}
+
+#btnArea {
+  margin-top: 15px
+}

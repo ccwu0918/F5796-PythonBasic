@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>訂單</title>
+  <link rel="shortcut icon" href="{{ url_for('static', 
+                                  filename='favicon.ico') }}">
+</head>
+
+<body>
+<h2>奶茶訂單</h2>
+<form action="{{ url_for('order') }}" method="POST">
+  <p>
+    <label for="user"">大名：</label>
+    <input type="text" name="user">
+  </p>
+  <p>
+    <legend>甜度：</legend>
+    <label>
+      <input type="radio" name="sugar" value="L">正常</label>
+    <label>
+      <input type="radio" name="sugar" value="M" checked>中糖</label>
+    <label>
+      <input type="radio" name="sugar" value="S">微糖</label>
+  </p>
+  <p>
+  <legend>加料：</legend>
+    <label>
+      <input type="checkbox" name="mix" value="百香果">百香果</label>
+    <label>
+      <input type="checkbox" name="mix" value="荔枝">荔枝</label>
+    <label>
+      <input type="checkbox" name="mix" value="芋頭">芋頭</label>
+    <label>
+      <input type="checkbox" name="mix" value="芒果">芒果</label>
+  </p>
+  <p>
+    <label for="area">區域：</label>
+    <select name="area" id="area">
+      <option value="北區">北區</option>
+      <option value="中區">中區</option>
+      <option value="西區" selected>西區</option>
+      <option value="東區">東區</option>
+      <option value="南區">南區</option>
+    </select>
+  </p>
+  <input type="reset" value="重設">
+  <input type="submit" value="送出">
+</form>
+</body>
+</html>

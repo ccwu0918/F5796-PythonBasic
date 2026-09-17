@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{{ url_for('static', 
+                                    filename='favicon.ico') }}">
+    <title>Flask樣版網頁</title>
+  </head>
+
+  <body>
+    {% if score >= 80 %}
+    <h1>很厲害哦～</h1>
+    {% elif score >= 60 %}
+    <h1>恭喜過關！</h1>
+    {% else %}
+    <h1>再接再厲～</h1>
+    {% endif %}
+  </body>
+</html>
