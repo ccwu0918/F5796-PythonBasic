@@ -1,0 +1,8 @@
+﻿import numpy as np
+
+mylist = [1,2,3]
+np.array(mylist)
+
+pic = np.zeros(shape=(3,5), dtype='uint8')
+pic[0][3] = 128
+pic[1][2] = 300

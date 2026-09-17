@@ -1,0 +1,8 @@
+﻿from PIL import Image, ImageDraw, ImageFont
+
+img = Image.open(r"img\sophia.jpg")
+draw = ImageDraw.Draw(img)
+
+_font = ImageFont.truetype(r"font\NotoSansCJKtc-Regular.otf", 20)
+draw.text((30,30), "貓頭鷹餐廳",font = _font, fill = 'black')
+img.show()

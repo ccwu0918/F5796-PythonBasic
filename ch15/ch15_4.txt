@@ -1,0 +1,8 @@
+﻿import numpy as np
+
+from PIL import Image
+img = Image.open(r'img\dots.png')
+img_arr = np.array(img)
+
+img_arr.shape
+img_arr

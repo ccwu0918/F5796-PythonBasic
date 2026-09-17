@@ -1,0 +1,19 @@
+from PIL import Image
+
+thumb_size = (600, 600)
+img = Image.open('img/pic.jpg')
+img.thumbnail(thumb_size)
+img.size
+img.show()
+
+img.save('thumb/pic.jpg', quality=80)
+
+img_w, img_h = img.size
+logo = Image.open('img/swf_logo.png')
+logo_w, logo_h = logo.size
+x = img_w - logo_w - 20
+y = img_h - logo_h - 20
+
+img.paste(logo, (x, y), logo)
+
+blank.save('thumb/pic.jpg', quality=80)
