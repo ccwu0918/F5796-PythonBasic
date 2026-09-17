@@ -1,0 +1,20 @@
+from pytubefix import YouTube
+from pytubefix.cli import on_progress
+yt = YouTube('https://youtu.be/siQJhIp-UTU')
+
+yt.title
+yt.streams
+yt.streams.filter(resolution="1080p")
+len(yt.streams.filter(resolution="1080p"))  # 共有3種
+yt.streams.filter(res="1080p")[0]
+yt.streams.filter(res="1080p").first()
+yt.streams.filter(res="1080p",video_codec="vp9")
+yt.streams.filter(res="1080p",subtype="webm")
+
+video = yt.streams.filter(res="1080p").first()
+video.download(output_path=r"D:\tube")  # 會自動生成資料夾
+# video.download()
+
+audio = yt.streams.filter(type="audio")  # 共4種音檔
+audio = yt.streams.get_audio_only()
+audio.download(output_path=r"D:\tube")

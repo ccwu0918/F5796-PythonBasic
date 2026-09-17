@@ -1,0 +1,22 @@
+import json
+
+with open('model/data.json', encoding='UTF-8') as f:
+    doc = json.loads(f.read())
+
+
+doc['日期時間']
+doc['觀測站'][1]['地區']
+doc['觀測站'][1]['PM25']
+
+
+phone = {
+    '處理器':'ARM',
+    '主記憶體':'6GB',
+    '儲存媒介':[
+        {'flash': '64GB'},
+        {'microSD': '128GB'},
+    ],
+}
+txt = json.dumps(phone, ensure_ascii=False)
+print(txt)
+

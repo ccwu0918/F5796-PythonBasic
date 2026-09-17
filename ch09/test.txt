@@ -1,0 +1,3 @@
+商品標題, 價格, 網址
+智慧音箱, 499, https://swf.com.tw/
+攀岩助手, 899, https://flag.com.tw/

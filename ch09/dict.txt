@@ -1,0 +1,19 @@
+members = [
+ {'name':'鋼鐵人', 'blood':'A', 'height':196},
+ {'name':'浩克', 'blood':'O', 'height':259},
+ {'name':'神盾副局長', 'blood':'AB', 'height':173}
+]
+
+print(members[2]['name'])
+
+member = { 'name':'鋼鐵人',
+           'blood':'A', 
+           'height':196}
+
+data = { 12:8,
+         (2,3):"number",
+         ' ':"Space" }
+
+print(data[12])
+print(data[(2,3)])
+print(data[' '])

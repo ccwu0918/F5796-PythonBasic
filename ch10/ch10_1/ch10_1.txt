@@ -1,0 +1,9 @@
+from shop import Order
+order1 = Order(3, True)
+order2 = Order(2)
+order1.check()
+Order.total
+
+
+Order.price = 10
+order1.check()

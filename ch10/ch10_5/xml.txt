@@ -1,0 +1,10 @@
+import xmltodict
+
+with open('model/data.xml', encoding='UTF-8') as f:
+    doc = xmltodict.parse(f.read())
+
+
+doc['櫥櫃']['外觀'] 
+doc['櫥櫃']['尺寸']['@單位']
+doc['櫥櫃']['尺寸']['深']
+    

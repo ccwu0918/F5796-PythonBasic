@@ -1,0 +1,22 @@
+file = open('test.txt', 'a')
+file.write('人言紛雜\n保持自我\n')
+file.close()
+
+
+file = open('/test.txt', 'r')
+file.read()
+
+
+file.seek(10)
+file.read()
+
+
+file.seek(0)
+file.readline()
+file.readline()
+file.readline()
+
+
+file.seek(0)
+file.readlines()
+file.close()

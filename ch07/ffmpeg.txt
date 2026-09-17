@@ -1,0 +1,9 @@
+ffmpeg -i "Taipei 101.mp4" -vn -ab 128k "愛上101.mp3"
+
+
+videos.txt檔案的內容：
+file 'E:\DCIM\Camera\視訊_1.mp4'
+file 'E:\DCIM\Camera\視訊_2.mp4'
+file 'E:\DCIM\Camera\視訊_3.mp4'
+
+ffmpeg -f concat -safe 0 -i videos.txt -c copy 合併視訊.mp4

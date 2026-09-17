@@ -1,0 +1,24 @@
+toys = ['伊布', '噴火龍', '妙蛙種子']
+len(toys)
+
+toys[-1]
+
+toys.append('水精靈')
+# toys.insert(3, '水精靈')
+
+toys[1] = '皮卡丘'
+
+toys.pop()
+
+toys.insert(0, '火爆猴')
+
+toys.pop(0)
+
+toys.extend(['夢幻', '快龍'])
+# toys += ['夢幻', '快龍']
+
+items = ['蜂蜜', '檸檬']
+items *= 2
+
+toys.remove('妙蛙種子')
+# del toys[2]

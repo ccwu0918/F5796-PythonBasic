@@ -1,0 +1,20 @@
+user = '小明', 'O', 145, '38KG' 
+type (user)
+
+x, y = 10, 20
+x, y = y, x
+
+picts=('JPG', 'PNG', 'GIF', 'BMP', 'TIF', 'SVG')
+picts[1:3]
+picts[3:]
+picts[:3]
+
+concate('標題','圖片','價格','網址',sep=',')
+
+def concate(name, *args, sep='/'):
+    assert isinstance(name, str), '第一個參數必須是字串類型。'
+    return name + '：' + sep.join(args)
+
+def goods(**kwargs):
+    for key in kwargs:
+        print(f'{key}的值是{kwargs[key]}')

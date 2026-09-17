@@ -1,0 +1,21 @@
+nums = [108, 74, 0.24, 39]
+nums.sort()
+
+foods = ['bread', 'apple', 'candy']
+foods.sort()
+
+txts = ['108', '7.4', '24', '39']
+txts.sort()
+
+d = [
+  ['手機', 195], 
+  ['筆電', 1890], 
+  ['平板', 330],
+]
+
+def weight(x):
+    return x[1]
+
+d.sort(key=weight)
+
+d.sort(key=lambda x: x[1])
